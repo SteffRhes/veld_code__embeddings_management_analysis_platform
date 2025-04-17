@@ -29,6 +29,7 @@ services:
       - ./src/jupyter/src/:/veld/code/
     working_dir: /veld/code/
     environment:
+      POSTGRES_HOST: "veld_postgres"
       POSTGRES_USER: "postgres_user"
       POSTGRES_PASSWORD: "postgres_password"
       POSTGRES_DB: "postgres_db"
