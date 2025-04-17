@@ -2,7 +2,7 @@ x-veld:
   code:
 
     networks:
-      - veld_postgres
+      - network_postgres_jupyter
 
     config:
       - environemnt_var: "POSTGRES_USER"
@@ -33,9 +33,9 @@ services:
       POSTGRES_PASSWORD: "postgres_password"
       POSTGRES_DB: "postgres_db"
     networks:
-      - veld_postgres
+      - network_postgres_jupyter
 
 networks:
-  veld_postgres:
+  network_postgres_jupyter:
     driver: bridge
 
