@@ -52,17 +52,6 @@ services:
     networks:
       - veld_postgres
 
-  veld_jupyter:
-    build: ./src/jupyter/
-    command: jupyter notebook --allow-root --ip='*' --NotebookApp.token='' --NotebookApp.password=''
-    ports:
-      - "127.0.0.1:8888:8888"
-    volumes:
-      - ./src/jupyter/src/:/veld/code/
-    working_dir: /veld/code/
-    networks:
-      - veld_postgres
-
 networks:
   veld_postgres:
     driver: bridge
