@@ -63,7 +63,8 @@ services:
     volumes:
       - ./src/jupyter/src/:/veld/code/
     working_dir: /veld/code/
-
+    networks:
+      - veld_postgres
 
 networks:
   veld_postgres:
